@@ -25,11 +25,10 @@ public class Calculator implements ActionListener{
         textfield = new JTextField();
         textfield.setBounds(50, 25, 300, 50);
         textfield.setFont(myFont);
+        textfield.setEditable(false);
 
         frame.add(textfield);
         frame.setVisible(true);
-
-
     }
     public static void main(String[] args){
         Calculator calc = new Calculator();
