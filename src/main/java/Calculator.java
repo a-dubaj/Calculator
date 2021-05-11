@@ -27,6 +27,24 @@ public class Calculator implements ActionListener{
         textfield.setFont(myFont);
         textfield.setEditable(false);
 
+        addButton = new JButton("+");
+        subButton = new JButton("-");
+        multiplyButton = new JButton("*");
+        divButton = new JButton("/");
+        decimalButton = new JButton(".");
+        equButton = new JButton("=");
+        delButton = new JButton("DEL");
+        clrButton = new JButton("CLR");
+
+        functionButtons[0] = addButton;
+        functionButtons[1] = subButton;
+        functionButtons[2] = multiplyButton;
+        functionButtons[3] = divButton;
+        functionButtons[4] = decimalButton;
+        functionButtons[5] = equButton;
+        functionButtons[6] = delButton;
+        functionButtons[7] = clrButton;
+
         frame.add(textfield);
         frame.setVisible(true);
     }
