@@ -102,5 +102,49 @@ public class Calculator implements ActionListener{
         if(e.getSource() == decimalButton){
             textfield.setText(textfield.getText().concat("."));
         }
+
+        if(e.getSource() == addButton){
+            num1 = Double.parseDouble(textfield.getText());
+            operator = '+';
+            textfield.setText("");
+        }
+
+        if(e.getSource() == subButton){
+            num1 = Double.parseDouble(textfield.getText());
+            operator = '-';
+            textfield.setText("");
+        }
+
+        if(e.getSource() == multiplyButton){
+            num1 = Double.parseDouble(textfield.getText());
+            operator = '*';
+            textfield.setText("");
+        }
+
+        if(e.getSource() == divButton){
+            num1 = Double.parseDouble(textfield.getText());
+            operator = '/';
+            textfield.setText("");
+        }
+
+        if(e.getSource() == equButton){
+            num2 = Double.parseDouble(textfield.getText());
+            switch (operator){
+                case'+':
+                    result = num1 + num2;
+                    break;
+                case'-':
+                    result = num1 - num2;
+                    break;
+                case'*':
+                    result = num1 * num2;
+                    break;
+                case'/':
+                    result = num1 / num2;
+                    break;
+            }
+            textfield.setText(String.valueOf(result));
+            num1 = result;
+        }
     }
 }
